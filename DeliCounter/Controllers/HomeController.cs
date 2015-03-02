@@ -13,6 +13,12 @@ namespace DeliCounter.Controllers
             return View();
         }
 
+        [AcceptVerbs(HttpVerbs.Post)]
+        public ActionResult Index(FormCollection collection)
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -20,10 +26,9 @@ namespace DeliCounter.Controllers
             return View();
         }
 
+        [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult AdminQueue()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
